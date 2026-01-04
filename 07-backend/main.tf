@@ -26,6 +26,7 @@ resource "null_resource" "backend" {
         user     = "ec2-user"
         password = "DevOps321"
         host     = module.backend.private_ip
+        timeout = "10m"
     }
 
     provisioner "file" {
